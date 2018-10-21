@@ -1,0 +1,26 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "main.cpp",
+                "-ID:\\github\\dependencies\\SDL2-2.0.8\\include",
+                "-LD:\\github\\dependencies\\SDL2-2.0.8\\lib\\x64",
+                "-lSDL2main","-lSDL2", "-lopengl32",
+                "-o",
+                "test-sdl"
+            ]
+        }
+    ],
+    "group": {
+        "kind": "build",
+        "isDefault": true
+    },
+    "problemMatcher":"$gcc"
+}
