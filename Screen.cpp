@@ -26,7 +26,8 @@ bool Screen::init()
     return true;
 }
 
-void Screen::update() {
+void Screen::update()
+{
     // 06 update texture
     SDL_UpdateTexture(m_texture, NULL, m_buffer, SCREEN_WIDTH * sizeof(Uint32));
     // 07 update renderer
@@ -35,10 +36,23 @@ void Screen::update() {
     SDL_RenderPresent(m_renderer);
 }
 
-void Screen::setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
-    
+void Screen::clear()
+{
+    // clear the buffer
+    memset(m_buffer, 0, SCREEN_WIDTH* SCREEN_HEIGHT * sizeof(Uint32));
+}
+
+void Screen::setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue)
+{
+
     //memset(m_buffer, 0, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(Uint32));
-    
+
+    // set checker to remove attempts trying to draw outside edges of screen
+    if (x < 0 || x >= SCREEN_WIDTH || y < 0 || y >= SCREEN_HEIGHT)
+    {
+        return;
+    }
+
     Uint32 color = 0;
 
     color += red;
@@ -49,7 +63,7 @@ void Screen::setPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue) {
     color <<= 8;
     color += 0xFF;
 
-    m_buffer[(y*SCREEN_WIDTH)+x] = color;
+    m_buffer[(y * SCREEN_WIDTH) + x] = color;
 }
 
 bool Screen::processEvents()
