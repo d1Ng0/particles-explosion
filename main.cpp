@@ -48,13 +48,6 @@ int main(int argc, char *argv[])
             screen.setPixel(x, y, red, green, blue);
         }
 
-        /*
-        for (int y = 0; y < Screen::SCREEN_HEIGHT; y++)
-        {
-            for (int x = 0; x < Screen::SCREEN_WIDTH; x++)
-            {
-                screen.setPixel(x, y, red, green, blue);
-            }*/
         screen.update();
 
         // Check for messages

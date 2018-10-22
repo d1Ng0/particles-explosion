@@ -6,8 +6,8 @@ namespace sdll {
 
 class Screen {
     public:
-        const static int SCREEN_WIDTH = 800;
-        const static int SCREEN_HEIGHT = 400;
+        const static int SCREEN_WIDTH = 1800;
+        const static int SCREEN_HEIGHT = 1100;
     private:
         SDL_Window *m_window;
         SDL_Renderer *m_renderer;
