@@ -8,11 +8,15 @@
 using namespace std;
 using namespace sdll;
 
+const static double screen_xscale = Screen::SCREEN_WIDTH / 2;
+const static double screen_yscale = Screen::SCREEN_HEIGHT / 2;
+
 int main(int argc, char *argv[])
 {
 
     srand(time(NULL));
     Screen screen;
+
 
     if (screen.init() == false)
     {
@@ -37,14 +41,14 @@ int main(int argc, char *argv[])
 
         const Particle *const pParticles = emitter.getParticles();
         screen.clear();
-        emitter.update();
+        emitter.update(elapsed);
 
         for (int i = 0; i < Emitter::NPARTICLES; i++)
         {
             Particle particle = pParticles[i];
-
-            int x = (particle.m_x + 1) * Screen::SCREEN_WIDTH / 2;
-            int y = (particle.m_y + 1) * Screen::SCREEN_HEIGHT / 2;
+            // draw particles
+            int x = (particle.m_x + 1) * screen_xscale;
+            int y = (particle.m_y ) * screen_xscale + screen_yscale;
             screen.setPixel(x, y, red, green, blue);
         }
 

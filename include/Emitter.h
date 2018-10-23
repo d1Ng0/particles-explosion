@@ -10,10 +10,12 @@ class Emitter
       const static int NPARTICLES = 1000;
     private:
       Particle *  m_pParticles;
+      int lastTime;
+
     public:
       Emitter();
-      void update();
       virtual ~Emitter();
+      void update(int elapsed);
       const Particle * const getParticles() { return m_pParticles; };
 };
 } // namespace sdll

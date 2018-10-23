@@ -2,7 +2,7 @@
 
 namespace sdll
 {
-    Emitter::Emitter(){
+    Emitter::Emitter(): lastTime(0) {
         m_pParticles = new Particle[NPARTICLES];
     }
 
@@ -10,10 +10,14 @@ namespace sdll
         delete[] m_pParticles;
     }
 
-    void Emitter::update(){
+    void Emitter::update(int elapsed){
+
+        int interval = elapsed - lastTime;
+
         for (int i = 0; i < Emitter::NPARTICLES; i++){
-            m_pParticles[i].update();
+            m_pParticles[i].update(interval);
         }
+        lastTime = elapsed;
     }
 
 }

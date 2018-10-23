@@ -9,9 +9,10 @@
             "command": "g++",
             "args": [
                 "-g",
-                "*.cpp",
-                "-ID:\\github\\dependencies\\SDL2-2.0.8\\include",
-                "-LD:\\github\\dependencies\\SDL2-2.0.8\\lib\\x64",
+                "src/*.cpp",
+                "-ID:\\github\\dependencies\\SDL\\include",
+                "-Iinclude",
+                "-LD:\\github\\dependencies\\SDL\\lib\\win64",
                 "-lSDL2main","-lSDL2", "-lopengl32",
                 "-o",
                 "particle-explosion"
