@@ -1,5 +1,7 @@
 # Pixels Explosion
 
+https://im4.ezgif.com/tmp/ezgif-4-741b4424e2d7.gif
+
 Just a simple C++ pixels explosion. Mostly based on SDL2 libraries.
 
 ## Getting Started
@@ -22,31 +24,6 @@ I've used g++, but there is also a cmake file which should allow to build with M
 g++ -g src/main.cpp src/Screen.cpp src/Emitter.cpp src/Particle.cpp -I/d/github/particles-explosion/include -I/d/github/dependencies/SDL/include -L/d/github/dependencies/SDL/lib/win64 -lSDL2main -lSDL2 -lopengl32 -o particle-explosion
 ```
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
 
 * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
