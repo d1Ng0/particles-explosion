@@ -1,6 +1,6 @@
 # Pixels Explosion
 
-![alt text](https://im4.ezgif.com/tmp/ezgif-4-741b4424e2d7.gif)
+![alt text](https://raw.githubusercontent.com/d1Ng0/pixels-explosion/master/ezgif-4-741b4424e2d7.gif)
 
 Just a simple C++ pixels explosion. Mostly based on SDL2 libraries.
 
