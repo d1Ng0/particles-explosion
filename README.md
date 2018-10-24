@@ -17,7 +17,7 @@ You'll need SDL2. I've compiled it for Windows and MacOS. I should work for Linu
 I've used g++, but there is also a cmake file which should allow to build with MinGW
 
 ```
-g++ -g main.cpp src/Screen.cpp src/Emitter.cpp src/Particle.cpp -I/d/github/particles-explosion/include -I/d/github/dependencies/SDL/include -L/d/github/dependencies/SDL/lib/win64 -lSDL2main -lSDL2 -lopengl32 -o particle-explosion
+g++ -g main.cpp src/Screen.cpp src/Emitter.cpp src/Particle.cpp -I/d/github/pixels-explosion/include -I/d/github/dependencies/SDL/include -L/d/github/dependencies/SDL/lib/win64-lSDL2main -lSDL2 -lopengl32 -o pixels-explosion
 ```
 ## Author
 

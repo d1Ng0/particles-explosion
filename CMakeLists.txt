@@ -37,4 +37,4 @@ target_link_libraries(sdl-particle-explosion ${SDL2_LIBRARIES})
 
 # To build from cms line
 #g++ -g *.cpp -ID:\\github\\dependencies\\SDL2-2.0.8\\include -LD:\\github\\dependencies\\SDL2-2.0.8\\lib\\x64 -lSDL2main -lSDL2 -lopengl32 -o particle-explosion
-#g++ -g src/main.cpp src/Screen.cpp src/Emitter.cpp src/Particle.cpp -I/d/github/particles-explosion/include -I/d/github/dependencies/SDL/include -L/d/github/dependencies/SDL/lib/win64 -lSDL2main -lSDL2 -lopengl32 -o particle-explosion
+#g++ -g main.cpp src/Screen.cpp src/Emitter.cpp src/Particle.cpp -I/d/github/pixels-explosion/include -I/d/github/dependencies/SDL/include -L/d/github/dependencies/SDL/lib/win64-lSDL2main -lSDL2 -lopengl32 -o pixels-explosion
