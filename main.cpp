@@ -35,12 +35,12 @@ int main(int argc, char *argv[])
         // Draw particles
         // Setup colors
         int elapsed = SDL_GetTicks();
-        unsigned char red = (unsigned char)((1 + sin(elapsed * 0.0001)) * 128);
-        unsigned char green = (unsigned char)((1 + sin(elapsed * 0.0002)) * 128);
-        unsigned char blue = (unsigned char)((1 + sin(elapsed * 0.0003)) * 128);
+        unsigned char red = (unsigned char)((1 + sin(elapsed * 0.0002)) * 128);
+        unsigned char green = (unsigned char)((1 + sin(elapsed * 0.0005)) * 128);
+        unsigned char blue = (unsigned char)((1 + sin(elapsed * 0.0007)) * 128);
 
         const Particle *const pParticles = emitter.getParticles();
-        screen.clear();
+        //screen.clear();
         emitter.update(elapsed);
 
         for (int i = 0; i < Emitter::NPARTICLES; i++)
@@ -51,6 +51,8 @@ int main(int argc, char *argv[])
             int y = (particle.m_y ) * screen_xscale + screen_yscale;
             screen.setPixel(x, y, red, green, blue);
         }
+
+        screen.boxBlur();
 
         screen.update();
 
